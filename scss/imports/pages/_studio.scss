@@ -1,0 +1,84 @@
+.studio {
+    margin-top: 70px;
+    padding-bottom: 55px;
+    &__product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 470px 470px;
+        gap: 20px;
+        border-bottom: 1px solid $black-cl;
+        padding-bottom: 40px;
+        &-item {
+            &--img {
+                position: relative;
+                overflow: hidden;
+                height: 300px;
+                a {
+                    img {
+                        top: 50%;
+                        left: 50%;
+                        position: absolute;
+                        min-width: 100%;
+                        min-height: 100%;
+                        object-fit: cover;
+                        @include transform(translate(-50%, -50%) scale(1));
+                        @include transition($t);
+                    }
+                }
+                &:hover {
+                    img {
+                        filter: grayscale(41%) sepia(5%) brightness(168%) contrast(104%) invert(3%);
+                        -webkit-filter: grayscale(41%) sepia(5%) brightness(168%) contrast(104%) invert(3%);
+                        -moz-filter: grayscale(41%) sepia(5%) brightness(168%) contrast(104%) invert(3%);
+                        @include transform(translate(-50%, -50%) scale(1.08));
+                        @include transition($t);
+                    }
+                }
+            }
+            &--text {
+                display: flex;
+                height: 120px;
+            }
+        }
+    }
+    @include tablet {
+        &__product {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 550px);
+            &-item {
+                &--img {
+                    height: 400px;
+                }
+                &--text {
+                    height: 100px;
+                    .number__studio {
+                        .name {
+                            font-size: 14px;
+                        }
+                        .number {
+                            font-size: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include mobile {
+        margin-top: 0;
+        padding-bottom: 25px;
+        &__product {
+            grid-template-columns: 1fr;
+            grid-template-rows: 380px;
+            padding-bottom: 50px;
+            &-item {
+                &--img {
+                    height: 300px;
+                }
+                &--text {
+                    height: 80px;
+                }
+            }
+        }
+    }
+}

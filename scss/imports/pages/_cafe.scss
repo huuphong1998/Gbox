@@ -1,0 +1,234 @@
+.cafe {
+    text-align: center;
+    position: relative;
+    margin-top: 135px;
+
+    &__wrap {
+        height: 352px;
+
+        &-text {
+            height: 100%;
+
+            &--hello {
+                position: relative;
+                color: #fbdb01;
+                z-index: 1;
+            }
+
+            &--title {
+                color: #fbdb01;
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            &--des {
+                color: $white-cl;
+                z-index: 1;
+
+                &::after {
+                    background: #fbdb01;
+                }
+            }
+
+            &--heading {
+                position: relative;
+                letter-spacing: 2px;
+                padding-top: 30px;
+                @include text(14px, $font-normal, normal, #ebebeb, uppercase);
+                z-index: 1;
+            }
+        }
+
+        &-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            img {
+                min-height: 350px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__grid {
+        background: #19191a;
+
+        &-wrap {
+            &--image {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 280px 280px;
+                gap: 15px;
+                width: 100%;
+
+                .item {
+                    position: relative;
+                    overflow: hidden;
+
+                    .imgcafe {
+                        min-height: 100%;
+                        min-width: 100%;
+                        top: 50%;
+                        left: 50%;
+                        position: absolute;
+                        object-fit: cover;
+                        @include transform(translate(-50%, -50%) scale(1));
+                        @include transition($t);
+                    }
+
+                    &:hover {
+                        .imgcafe {
+                            @include transform(translate(-50%, -50%) scale(1.08));
+                            @include transition($t);
+                            filter: brightness(47%);
+                            -webkit-filter: brightness(47%);
+                            -moz-filter: brightness(47%);
+                        }
+                    }
+
+                    .fullscr {
+                        position: absolute;
+                        display: flex;
+                        bottom: 12px;
+                        left: 10px;
+
+                        &__icon {
+                            background: $yellow-cl;
+                            padding: 7px;
+                        }
+
+                        &__text {
+                            display: flex;
+                            align-items: flex-end;
+                            padding-left: 8px;
+                            color: $white-cl;
+                            font-size: 12px;
+                        }
+                    }
+
+                    &.item1 {
+                        grid-column: 1/2;
+                        grid-row: 1/3;
+                    }
+
+                    &.item2 {
+                        grid-column: 2/4;
+                        grid-row: 1/2;
+                    }
+
+                    &.item5 {
+                        grid-column: 3/4;
+                        grid-row: 1/3;
+                    }
+
+                    &.item8 {
+                        grid-column: 1/3;
+                        grid-row: 2/3;
+                    }
+
+                    &.item9 {
+                        grid-column: 2/3;
+                        grid-row: 1/3;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        .cafe__card {
+            padding: 55px 0 95px;
+            text-align: center;
+            border-bottom: 1px solid $black-cl;
+            margin-bottom: 55px;
+
+            &-title {
+                @include text(14px, $font-normal, normal, $black-cl, uppercase);
+                letter-spacing: 2px;
+                padding-bottom: 25px;
+            }
+
+            &-description {
+                @include text(12px, $font-normal, normal, $black-cl, none);
+                letter-spacing: -1px;
+                line-height: 22px;
+                max-width: 390px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    @include tablet {
+        &__wrap {
+            &-text {
+                &--des {
+                    max-width: 500px;
+
+                    &::after {
+                        margin: 25px auto 0;
+                    }
+                }
+
+                &--heading {
+                    padding-top: 25px;
+                }
+            }
+        }
+
+        &__grid {
+            &-wrap {
+                &--image {
+                    grid-template-rows: 200px 200px;
+                }
+            }
+        }
+
+        .container {
+            .cafe__card {
+                padding: 50px 0 50px;
+            }
+        }
+    }
+
+    @include mobile {
+        margin-top: 70px;
+
+        &__wrap {
+            &-text {
+                &--des {
+                    max-width: 90%;
+                    line-height: initial;
+
+                    &::after {
+                        width: 100%;
+                        margin: 30px auto 0;
+                    }
+                }
+
+                &--hello {
+                    padding-top: 30px;
+                }
+            }
+        }
+
+        &__grid {
+            &-wrap {
+                &--image {
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 300px;
+                    gap: 10px;
+                }
+            }
+        }
+
+        .container {
+            .cafe__card {
+                padding: 40px 0 40px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

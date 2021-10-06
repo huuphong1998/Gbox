@@ -1,0 +1,37 @@
+.homepage {
+    .product {
+        &__project {
+            .allworks {
+                &__btn {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    &-content {
+                        font-size: 14px;
+                        max-width: 120px;
+                        padding-right: 15px;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    @include mobile {
+        .product {
+            &__project {
+                .allworks {
+                    &__btn {
+                        padding-top: 70px;
+                        direction: rtl;
+                        width: 100%;
+                        justify-content: center;
+                        &-content {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

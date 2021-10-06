@@ -1,0 +1,189 @@
+//     // @include desktop {
+
+//     // }
+//     // @include tablet {
+
+//     // }
+//     // @include mobile {
+
+//     // }
+//     // @include mobile-xxs {
+
+//     // }
+// }
+
+.header {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: $menu-cl;
+
+    .container {
+        height: 100%;
+
+        .header__main {
+            height: 100%;
+
+            .logo {
+                @include mid();
+
+                .hidden {
+                    display: none;
+                }
+            }
+
+            .icon {
+                position: absolute;
+                top: 50%;
+                right: 15px;
+                transform: translateY(-50%);
+
+                img {
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
+
+        .menu {
+            @include midflex();
+            position: relative;
+            border-bottom: 1px solid $black-cl;
+            height: 65px;
+            @include transition($t);
+
+            a {
+                @include text(12px, $font-bold, normal, $black-cl, uppercase);
+            }
+
+            .menu-left {
+                @include transition($t);
+                position: absolute;
+                left: 0;
+            }
+
+            .menu-main {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+
+                ul {
+                    @include midflex();
+
+                    li {
+                        a {
+                            padding: 0 30px;
+                        }
+                    }
+                }
+            }
+
+            .menu-right {
+                @include transition($t);
+                position: absolute;
+                right: 0;
+            }
+
+            &.active {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: $yellow-cl;
+                position: fixed;
+                left: 0;
+                transform: translateX(0);
+                @include transition($t);
+
+                a {
+                    @include text(16px, $font-normal, normal, $white-cl, uppercase);
+                    height: unset;
+                    @include midflex();
+                    transition: $t;
+
+                    &:hover {
+                        color: $black-cl;
+                        transition: $t;
+                    }
+                }
+
+                .menu-left {
+                    position: initial;
+                }
+
+                .menu-main {
+                    position: initial;
+                    @include transform(initial);
+
+                    ul {
+                        display: block;
+
+                        li {
+                            a {
+                                padding: initial;
+                                margin: 50px 0;
+                            }
+                        }
+                    }
+                }
+
+                .menu-right {
+                    position: initial;
+                }
+            }
+
+            &.--color {
+                @include transition($t);
+                background: $yellow-cl;
+                border-bottom: none;
+                padding: 0 20px;
+
+                .menu-left {
+                    @include transition($t);
+                    left: 20px;
+                }
+
+                .menu-right {
+                    @include transition($t);
+                    right: 20px;
+                }
+            }
+        }
+    }
+
+    @include tablet {
+        .container {
+            .menu {
+                .menu-main {
+                    ul {
+                        li {
+                            a {
+                                padding: 0 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include mobile {
+        .container {
+            .header__main {
+                .menu-btn {
+                    display: flex;
+                }
+            }
+
+            .menu {
+                display: none;
+            }
+        }
+    }
+}

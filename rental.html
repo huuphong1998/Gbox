@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Gbox Project</title>
+    <link rel="icon" href="https://www.vivosmartphone.vn/themes/vivo/favicon.ico">
+    <meta name="title" content="" />
+    <meta name="description" content="" />
+    <meta property="og:locale" content="vi" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Trang chủ" />
+    <meta property="og:description" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="stylesheet" href="dest/style.min.css">
+    <link rel="stylesheet" href="dest/fonts.css">
+    <link rel="stylesheet" href="dest/stylelibs.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__main">
+                <div class="menu-btn">
+                    <div class="menu-btn__burger"></div>
+                </div>
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png" alt=""></a>
+                    <h1 class="hidden">GBOX</h1>
+                </div>
+                <div class="icon">
+                    <a href="https://www.facebook.com/profile.php?id=100013215545195" target="_blank"><img
+                            src="img/icon-facebook.svg" alt=""></a>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="menu-left">
+                    <a href="about.html">ABOUT</a>
+                </div>
+                <div class="menu-main">
+                    <ul>
+                        <li><a href="studio.html">STUDIO</a></li>
+                        <li><a href="rental.html">RENTAL</a></li>
+                        <li><a href="cafe.html">CAFE</a></li>
+                        <li><a href="work.html">WORK</a></li>
+                    </ul>
+                </div>
+                <div class="menu-right">
+                    <a href="contact.html">CONTACT</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="rentalhomepage">
+        <section class="rental pdtop">
+            <div class="container">
+                <div class="rental__wrap">
+                    <div class="rental__category">
+                        <div class="rental__category-box number__studio --height">
+                            <span class="name">studio</span>
+                            <span class="number">01</span>
+                        </div>
+                        <p class="rental__category-title titledetail --white">Rental</p>
+                        <div class="textwrapper --width">
+                            <div class="textwrapper__description --pdleft --white">
+                                <span class="size --lettersp">DIMENSIONS</span>
+                                <span class="demension">87ft × 92ft × 31ft</span>
+                                <span>(26.52m × 28.04m × 9.45m)</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form action="" method="POST" class="rental__form" id="form-rental">
+                        <div class="rental__form-item item1">
+                            <p class=" rental__form-item--title titleform">Company details</p>
+                            <div class="rental__form-item--group">
+                                <label for="namecompany" class="form-label">Company Name: *</label>
+                                <input type="text" id="nameCompany" name="nameCompany" class="form-field">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group">
+                                <label for="namecontact" class="form-label">Contact Name: *</label>
+                                <input type="text" id="nameContact" name="nameContact" class="form-field">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group">
+                                <label for="phone" class="form-label">Phone: *</label>
+                                <input type="number" id="phone" name="phone" class="form-field">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="rental__form-item item2">
+                            <div class="rental__form-item--group">
+                                <label for="email" class="form-label">E-mail: *</label>
+                                <input type="text" id="email" name="email" class="form-field">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group">
+                                <label for="paymentAddress" class="form-label">Accounts payable contact: *</label>
+                                <input type="text" id="paymentAddress" name="paymentAddress" class="form-field">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group">
+                                <label for="companyAddress" class="form-label">Company Address: *</label>
+                                <textarea id="companyAddress" class="form-rectange"></textarea>
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="rental__form-item item3">
+                            <p class="rental__form-item--title titleform">Booking details</p>
+                            <span>Studio:</span>
+                            <div class="rental__form-item--button">
+                                <span class="active">01</span>
+                                <span>02</span>
+                                <span>03</span>
+                                <span>04</span>
+                            </div>
+                            <div class="rental__form-item--group">
+                                <label for="request" class="form-label">Catering requirements:</label>
+                                <textarea id="request" class="form-rectange"></textarea>
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group group3">
+                                <label for="reservation" class="form-label label3">Booking Duration:</label>
+                                <input type="date" id="reservation" name="reservation" class="form-initial">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="rental__form-item item4">
+                            <div class="rental__form-item--group">
+                                <label for="lightingRequirements" class="form-label">Lighting requirements:</label>
+                                <textarea id="lightingRequirements" class="form-rectange"></textarea>
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group group4">
+                                <label for="question" class="form-label"></label>
+                                <span class="note">Please note: All lighting hire to go through Gbox Studios</span>
+                                <input type="date" id="question" name="question" class="form-initial">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="rental__form-item item5">
+                            <div class="rental__form-item--group">
+                                <label for="project" class="form-label">Project Reference:</label>
+                                <input type="text" id="project" name="project" class="form-maxwidth">
+                                <span class="form-message"></span>
+                            </div>
+                            <div class="rental__form-item--group">
+                                <label for="aboutUs" class="form-label label5">Where did you hear about us:</label>
+                                <input type="text" id="aboutUs" name="aboutUs" class="form-maxwidth">
+                                <span class="form-message"></span>
+                            </div>
+                        </div>
+                        <div class="rental__form-item item6 button">
+                            <button class="btnmain">SUBMIT</button>
+                            <p class="button__des">By submitting this form I agree to
+                                <span>GBox Studio’s</span> Terms & Conditions.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class=" container">
+            <div class="row">
+                <div class="footer__left textcontact col-md-6 col-xs-12">
+                    <span>email</span>
+                    <span>info@goldenboxstudios.com</span>
+                    <p class=" mg">tel <span class="mgl">+84 979 872 809</span></p>
+                    <span>address</span>
+                    <span>04 bau cat district tan binh</span>
+                    <span>ho chi minh city.</span>
+                </div>
+                <div class="footer__right col-md-6 col-xs-12">
+                    <div class="footerus textcontact">
+                        <span>If you have any questions,</span>
+                        <span>comments or</span>
+                        <span>suggestions, feel free to email</span>
+                        <span>us or</span>
+                    </div>
+                    <div class="footer__form">
+                        <form action="#" method="POST" class="form" id="form-footer">
+                            <div class="input">
+                                <input type="text" class="input__field" id="input-1" />
+                                <label for="input-1" class="input__label">
+                                    <span class="input__label-content">Your Name</span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input__field" id="input-2" />
+                                <label for="input-2" class="input__label">
+                                    <span class="input__label-content">Subject</span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="input">
+                                <input type="number" class="input__field" id="input-3" />
+                                <label for="input-3" class="input__label">
+                                    <span class="input__label-content">Phone</span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="input">
+                                <input type="text" class="input__field" id="input-4" />
+                                <label for="input-4" class="input__label">
+                                    <span class="input__label-content">Email</span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+                            <div class="input message">
+                                <textarea class="input__field" id="input-5"></textarea>
+                                <label for="input-5" class="input__label">
+                                    <span class="input__label-content">Message</span>
+                                </label>
+                                <span class="error-message"></span>
+                            </div>
+                            <button class="send-button">Send</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer__copyright col-md-12 col-xs-12">
+                    <div class="footer__copyright-icon">
+                        <a href="#"><img src="img/up-arrow.svg" class="backtotop" alt=""></a>
+                    </div>
+                    <div class="footer__copyright-content">
+                        <i><img src="img/copyright.svg" alt=""></i>
+                        <span>2018 GBOX STUDIO. All rights reserved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="back-to-top"></div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+
+
+    <script type="text/javascript" src="dest/jsmain.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script>
+        Validator({
+            form: '#form-rental',
+            formGroupSelector: '.rental__form-item--group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isRequired('#nameCompany', 'Vui lòng nhập tên công ty'),
+                Validator.isRequired('#nameContact', 'Vui lòng nhập họ và tên'),
+                Validator.isRequired('#phone', 'Vui lòng nhập số điện thoại'),
+                Validator.isPhone('#phone', 10, 'Số điện thoại chưa đúng'),
+                Validator.isRequired('#paymentAddress', 'Vui lòng nhập tài khoản thanh toán'),
+                Validator.isRequired('#companyAddress', 'Vui lòng nhập địa chỉ công ty'),
+                Validator.isRequired('#reservation', 'Vui lòng nhập thời gian đặt trước'),
+                Validator.isRequired('#lightingRequirements', 'Vui lòng nhập yêu cầu về ánh sáng'),
+                Validator.isRequired('#request', 'Vui lòng nhập yêu cầu về ăn uống'),
+                Validator.isRequired('#project', 'Vui lòng nhập dự án'),
+                Validator.isRequired('#question', 'Vui lòng nhập thời gian đặt trước'),
+                Validator.isRequired('#aboutUs'),
+                Validator.isRequired('#email', 'Vui lòng nhập email'),
+                Validator.isEmail('#email', 'Email không đúng định dạng')
+            ],
+            onSubmit: (data) => {
+                alert('Gửi biểu mẫu thành công')
+                document.querySelector('#form-rental').reset()
+            }
+        });
+        Validator({
+            form: '#form-footer',
+            formGroupSelector: '.input',
+            errorSelector: '.error-message',
+            rules: [
+                Validator.isRequired('#input-1', 'Vui lòng nhập họ và tên'),
+                Validator.isRequired('#input-2', 'Vui lòng nhập chủ đề'),
+                Validator.isRequired('#input-3', 'Vui lòng nhập số điện thoại'),
+                Validator.isPhone('#input-3', 10, 'Số điện thoại chưa đúng'),
+                Validator.isRequired('#input-4', 'Vui lòng nhập email'),
+                Validator.isEmail('#input-4', 'Email không đúng định dạng'),
+                Validator.isRequired('#input-5', 'Vui lòng nhập thông điệp'),
+            ],
+            onSubmit: (data) => {
+                alert('Gửi biểu mẫu thành công')
+                document.querySelector('#form-footer').reset()
+            }
+        });
+    </script>
+</body>
+
+</html>

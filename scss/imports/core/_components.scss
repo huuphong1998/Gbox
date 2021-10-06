@@ -1,0 +1,361 @@
+.textbox {
+    text-align: center;
+    margin-top: 35px;
+
+    span {
+        @include text(12px, $font-bold, $lh-text, $black-cl, uppercase);
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 15px;
+            height: 2px;
+            background: $yellow-cl;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 5px;
+        }
+    }
+
+    .des {
+        margin-top: 10px;
+
+        &__text {
+            font-size: 12px;
+            line-height: 20px;
+
+            i {
+                font-style: italic;
+            }
+        }
+    }
+
+    @include mobile {
+        margin-top: 10px;
+    }
+}
+
+.textmain {
+    width: 80px;
+    margin: auto;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 22px;
+    padding-top: 50px;
+
+    @include mobile {
+        padding-top: initial;
+    }
+}
+
+.titlemain {
+    @include text(20px, $font-bold, $lh-text, #525355, uppercase);
+    letter-spacing: 4px;
+    position: relative;
+    padding: 20px 0 15px;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        width: 190px;
+        height: 15px;
+        background: $yellow-cl;
+        @include mid();
+        z-index: -1;
+    }
+
+    @include mobile {
+        padding: 15px 0 15px;
+    }
+}
+
+.description {
+    font-size: 12px;
+    line-height: 22px;
+    position: relative;
+    max-width: 750px;
+    margin: 0 auto;
+
+    &::after {
+        content: "";
+        width: 320px;
+        height: 1px;
+        background: $black-cl;
+        display: block;
+        margin: 40px auto 0;
+    }
+
+    @include mobile {
+        &::after {
+            width: 100%;
+            margin: 20px auto 0;
+        }
+    }
+}
+
+.titleproject01 {
+    @include text(14px, $font-normal, normal, $black-cl, uppercase);
+    letter-spacing: 2px;
+    padding-bottom: 12px;
+
+    &:first-child {
+        padding-bottom: 0;
+    }
+
+    @include tablet {
+        &:first-child {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+.textproject01 {
+    display: inline-flex;
+    align-items: center;
+
+    span {
+        font-size: 12px;
+    }
+}
+
+.textcontact {
+    display: flex;
+    flex-flow: column;
+    @include text(12px, $font-normal, 30px, $black-cl, uppercase);
+    letter-spacing: 1px;
+
+    &.--margin {
+        margin: 20px auto;
+        position: relative;
+    }
+
+    .mg {
+        margin: 25px 0;
+
+        .mgl {
+            margin-left: 25px;
+            font-size: 11px;
+        }
+    }
+
+    @include mobile {
+        &.--margin {
+            margin: initial;
+        }
+
+        .mg {
+            margin: 0;
+        }
+    }
+}
+
+.menu-btn {
+    width: 80px;
+    height: 70px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+
+    &::before {
+        transform: translateY(-7px);
+    }
+
+    &::after {
+        transform: translateY(7px);
+    }
+
+    &::before,
+    &::after,
+    &__burger {
+        content: "";
+        width: 37px;
+        height: 3px;
+        background: $yellow-cl;
+        border-radius: 5px;
+        transition: all 0.2s ease-in-out;
+        display: block;
+    }
+
+    &.open {
+        .menu-btn__burger {
+            transform: translateX(-50px);
+            background: transparent;
+        }
+
+        &::before {
+            transform: rotate(45deg) translate(6px, -1px);
+            background: $yellow-cl;
+        }
+
+        &::after {
+            transform: rotate(-45deg) translate(5px, 3px);
+            background: $yellow-cl;
+        }
+    }
+}
+
+.number__studio {
+    @include midflex();
+    flex-direction: column;
+    height: 100%;
+    width: 120px;
+    background: $yellow-cl;
+
+    &.--height {
+        height: 120px;
+    }
+
+    .name {
+        @include text(11px, $font-normal, normal, $black-cl, uppercase);
+    }
+
+    .number {
+        @include text(60px, $font-din, normal, $black-cl, uppercase);
+    }
+
+    @include tablet {
+        &.--height {
+            height: 100px;
+            width: 110px;
+        }
+    }
+
+    @include mobile {
+        width: 80px;
+
+        .name {
+            font-size: initial;
+        }
+
+        .number {
+            font-size: 50px;
+        }
+    }
+}
+
+.textwrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 12px;
+    width: calc(100% - 120px);
+    @include transition($t);
+
+    &.--width {
+        font-size: 14px;
+        width: initial;
+        justify-content: initial;
+
+        &:hover {
+            background: initial;
+            color: initial;
+            transition: initial;
+        }
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        &.--pdleft {
+            padding-left: 0;
+        }
+
+        .size {
+            padding-bottom: 10px;
+
+            &.--lettersp {
+                letter-spacing: 2px;
+            }
+        }
+
+        .demension {
+            line-height: 20px;
+
+            &.--fz {
+                font-size: 14px;
+            }
+        }
+    }
+
+    &__details {
+        a {
+            img {
+                padding-top: 15px;
+            }
+        }
+    }
+
+    &:hover {
+        background: #525355;
+        color: $white-cl;
+        transition: $t;
+    }
+
+    @include tablet {
+        font-size: 15px;
+    }
+
+    @include mobile {
+        width: calc(100% - 80px);
+        font-size: initial;
+    }
+}
+
+.titledetail {
+    @include text(32px, $font-bold, normal, #39382f, none);
+}
+
+.titleform {
+    @include text(28px, $font-bold, normal, #39382f, none);
+    letter-spacing: -2px;
+    padding-bottom: 30px;
+
+    @include mobile {
+        padding-bottom: 10px;
+    }
+}
+
+.textdetails {
+    @include text(14px, $font-normal, normal, $black-cl, none);
+
+    &.--pdtextleft {
+        padding: 20px 0 20px 55px;
+    }
+
+    &.--pdtextright {
+        display: flex;
+        justify-content: flex-end;
+        padding: 20px 15px 20px 0;
+    }
+
+    &.--pdbottom {
+        padding-bottom: 30px;
+    }
+
+    &.--lh {
+        line-height: 20px;
+    }
+}
+
+.bold {
+    font-weight: bold;
+    line-height: 20px;
+}
+
+.--white {
+    color: $white-cl;
+}
+
+.--position {
+    position: relative;
+}

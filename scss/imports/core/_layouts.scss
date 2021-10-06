@@ -1,0 +1,46 @@
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+html,
+body {
+    width: 100%;
+    max-width: $max-width;
+    -webkit-font-smoothing: antialiased;
+    margin: auto;
+    @include text($fz-text, $font-normal, $lh-text, $text-cl, none);
+    background: $main-bg-cl;
+    position: relative;
+
+    // scroll-behavior: smooth;
+    main {
+        section {
+            &.pdtop {
+                padding-top: 135px;
+            }
+        }
+    }
+
+    @include custom-scrollbar();
+
+    @include desktop {}
+
+    @include tablet {}
+
+    @include mobile {
+        main {
+            section {
+                &.pdtop {
+                    padding-top: 90px;
+                }
+            }
+        }
+    }
+}
